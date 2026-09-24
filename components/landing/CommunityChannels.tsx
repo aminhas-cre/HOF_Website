@@ -4,19 +4,19 @@ const CHANNELS = [
   {
     key: "whatsapp",
     name: "WhatsApp Group",
-    body: "Daily conversation, quick questions, and updates on new properties.",
+    body: "Where the real conversation happens. Ask a question about a property or a structure and get an answer the same day.",
     url: SOCIAL_LINKS.whatsapp,
   },
   {
     key: "instagram",
     name: "Instagram",
-    body: "Short lessons on halal structures and community stories.",
+    body: "Short, clear explainers on halal structures and glossary terms you can actually use in a conversation with a seller.",
     url: SOCIAL_LINKS.instagram,
   },
   {
     key: "facebookGroup",
     name: "Facebook Group",
-    body: "Longer discussions, Q&A, and announcements.",
+    body: "Longer discussions, deal breakdowns, and a place to search past questions before asking your own.",
     url: SOCIAL_LINKS.facebookGroup,
   },
 ] as const;
@@ -29,8 +29,8 @@ export function CommunityChannels() {
           Join the community
         </h2>
         <p className="mx-auto mt-3 max-w-xl text-center text-sand/70">
-          Sign up below and you will get direct links to each of these once
-          you are in.
+          Sign up below and you will get the links to each of these right
+          away.
         </p>
         <div className="mt-10 grid gap-6 sm:grid-cols-3">
           {CHANNELS.map((channel) => {
@@ -47,7 +47,7 @@ export function CommunityChannels() {
                     href={channel.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-4 inline-block text-sm font-semibold text-gold-light underline underline-offset-2"
+                    className="mt-4 inline-block cursor-pointer text-sm font-semibold text-gold-light underline underline-offset-2"
                   >
                     Join now
                   </a>

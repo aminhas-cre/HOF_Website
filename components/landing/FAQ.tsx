@@ -1,5 +1,9 @@
 const FAQS = [
   {
+    q: "Is this another real estate guru selling a course?",
+    a: "No. There is no course to buy here. This is a free community led by an Imam who invests in real estate himself, built to help families structure a specific deal correctly, not to sell you a system.",
+  },
+  {
     q: "Is owner financing halal?",
     a: "It can be, when it is structured with a fixed total price agreed upfront, no interest or compounding, and clear ownership and risk. This community helps you understand and pursue those structures.",
   },

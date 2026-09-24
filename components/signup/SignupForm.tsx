@@ -32,17 +32,17 @@ const BUCKETS: { value: LeadBucket; label: string; body: string }[] = [
   {
     value: "investor",
     label: "Investor",
-    body: "I want to acquire properties using halal financing structures.",
+    body: "I want to acquire property using structures that stay free of riba.",
   },
   {
     value: "primary_home",
     label: "Looking for a primary home",
-    body: "I want to buy a home to live in, without an interest based mortgage.",
+    body: "I want a home for my family, without an interest based mortgage.",
   },
   {
     value: "exploring",
     label: "Just exploring",
-    body: "I am learning and not ready to make a decision yet.",
+    body: "I am learning first. I am not ready to decide yet, and that is fine.",
   },
 ];
 
@@ -89,7 +89,7 @@ function RadioGroup({
       {options.map((option) => (
         <label
           key={option}
-          className={`cursor-pointer rounded-lg border px-4 py-3 text-sm transition ${
+          className={`cursor-pointer rounded-lg border px-4 py-3 text-sm transition has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-emerald has-[:focus-visible]:ring-offset-2 ${
             value === option
               ? "border-emerald bg-emerald/10 font-medium text-emerald"
               : "border-emerald/20 text-ink/70 hover:border-emerald/40"
@@ -255,6 +255,7 @@ export function SignupForm() {
             <label className="block text-sm font-medium text-ink/80">Phone (optional)</label>
             <input
               type="tel"
+              inputMode="tel"
               value={form.phone}
               onChange={(e) => update("phone", e.target.value)}
               className="mt-1 w-full rounded-lg border border-emerald/20 px-4 py-2 focus:border-emerald focus:outline-none"
@@ -299,12 +300,12 @@ export function SignupForm() {
 
       {step === 2 && (
         <div className="space-y-4">
-          <h2 className="font-serif text-xl font-semibold text-emerald">What brings you here today?</h2>
+          <h2 className="font-serif text-xl font-semibold text-emerald">What brings you to this community?</h2>
           <div className="space-y-3">
             {BUCKETS.map((bucket) => (
               <label
                 key={bucket.value}
-                className={`block cursor-pointer rounded-lg border px-4 py-3 transition ${
+                className={`block cursor-pointer rounded-lg border px-4 py-3 transition has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-emerald has-[:focus-visible]:ring-offset-2 ${
                   form.bucket === bucket.value
                     ? "border-emerald bg-emerald/10"
                     : "border-emerald/20 hover:border-emerald/40"

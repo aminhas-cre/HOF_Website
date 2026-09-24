@@ -20,19 +20,15 @@ const config: Config = {
         gold: {
           DEFAULT: "#b8925a",
           light: "#d6b78a",
+          // Darker variant for text on light backgrounds. #b8925a only hits
+          // 2.56:1 on the sand background, well under WCAG AA; this hits 5.6:1.
+          ink: "#7a5a30",
         },
         ink: "#1c2420",
       },
       fontFamily: {
-        serif: ["Georgia", "Cambria", "Times New Roman", "serif"],
-        sans: [
-          "-apple-system",
-          "BlinkMacSystemFont",
-          "Segoe UI",
-          "Helvetica",
-          "Arial",
-          "sans-serif",
-        ],
+        serif: ["var(--font-heading)", "Georgia", "Cambria", "serif"],
+        sans: ["var(--font-body)", "-apple-system", "Helvetica", "Arial", "sans-serif"],
       },
     },
   },

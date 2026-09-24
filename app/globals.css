@@ -6,6 +6,19 @@ html {
   scroll-behavior: smooth;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
 body {
   background-color: #f6f1e7;
   color: #1c2420;
@@ -16,9 +29,9 @@ body {
 }
 
 .btn-primary {
-  @apply inline-flex items-center justify-center rounded-full bg-emerald px-6 py-3 text-sm font-semibold text-sand shadow-sm transition hover:bg-emerald-dark focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald focus-visible:ring-offset-2;
+  @apply inline-flex cursor-pointer items-center justify-center rounded-full bg-emerald px-6 py-3 text-sm font-semibold text-sand shadow-sm transition hover:bg-emerald-dark focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-60;
 }
 
 .btn-secondary {
-  @apply inline-flex items-center justify-center rounded-full border border-emerald px-6 py-3 text-sm font-semibold text-emerald transition hover:bg-emerald hover:text-sand focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald focus-visible:ring-offset-2;
+  @apply inline-flex cursor-pointer items-center justify-center rounded-full border border-emerald px-6 py-3 text-sm font-semibold text-emerald transition hover:bg-emerald hover:text-sand focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald focus-visible:ring-offset-2;
 }

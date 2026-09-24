@@ -4,13 +4,16 @@ export function Problem() {
       <div className="container-page max-w-3xl text-center">
         <h2 className="font-serif text-3xl font-semibold text-emerald">
           A conventional mortgage means interest. Many Muslim families feel
-          stuck renting because of it.
+          stuck between riba and renting forever.
         </h2>
         <p className="mt-4 text-ink/70">
-          Owner financing, structured correctly, offers a path to
-          homeownership without riba. It takes the right knowledge, the right
-          structure, and the right seller. That is what this community is
-          here to help with.
+          Owner financing can be done in a way that avoids riba, but most
+          templates and "halal financing" offers you find online are not
+          actually structured correctly, and getting it wrong is a real
+          worry when your Deen is involved. It takes the right structure,
+          the right documentation, and the right seller. That is exactly
+          what this community exists to help with, taught by someone
+          accountable to you as both an Imam and an investor.
         </p>
       </div>
     </section>

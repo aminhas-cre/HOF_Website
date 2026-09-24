@@ -89,7 +89,7 @@ function RadioGroup({
       {options.map((option) => (
         <label
           key={option}
-          className={`cursor-pointer rounded-lg border px-4 py-3 text-sm transition has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-emerald has-[:focus-visible]:ring-offset-2 ${
+          className={`radio-card cursor-pointer rounded-lg border px-4 py-3 text-sm transition ${
             value === option
               ? "border-emerald bg-emerald/10 font-medium text-emerald"
               : "border-emerald/20 text-ink/70 hover:border-emerald/40"
@@ -305,7 +305,7 @@ export function SignupForm() {
             {BUCKETS.map((bucket) => (
               <label
                 key={bucket.value}
-                className={`block cursor-pointer rounded-lg border px-4 py-3 transition has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-emerald has-[:focus-visible]:ring-offset-2 ${
+                className={`radio-card block cursor-pointer rounded-lg border px-4 py-3 transition ${
                   form.bucket === bucket.value
                     ? "border-emerald bg-emerald/10"
                     : "border-emerald/20 hover:border-emerald/40"

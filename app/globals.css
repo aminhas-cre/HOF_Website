@@ -35,3 +35,13 @@ body {
 .btn-secondary {
   @apply inline-flex cursor-pointer items-center justify-center rounded-full border border-emerald px-6 py-3 text-sm font-semibold text-emerald transition hover:bg-emerald hover:text-sand focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald focus-visible:ring-offset-2;
 }
+
+/* Visible keyboard focus for the custom radio "cards" in SignupForm, which
+   wrap a visually-hidden (sr-only) radio input. Tailwind's ring-* utilities
+   compose via shared CSS custom properties, which doesn't reliably resolve
+   when split across three separate has-[:focus-visible]: classes; a plain
+   outline on the label itself is simple and reliable. */
+.radio-card:has(:focus-visible) {
+  outline: 2px solid #0f4a3c;
+  outline-offset: 2px;
+}

@@ -9,4 +9,11 @@ export const SOCIAL_LINKS = {
 export const CONTACT_EMAIL =
   process.env.NEXT_PUBLIC_CONTACT_EMAIL || "hello@ownerfinancinghalalway.com";
 
+// Free offers. Same "Coming soon" fallback behavior as SOCIAL_LINKS.
+export const FREE_OFFERS = {
+  trainingVideos: process.env.NEXT_PUBLIC_TRAINING_VIDEOS_URL || "",
+  resources: process.env.NEXT_PUBLIC_RESOURCES_URL || "",
+  calendly: process.env.NEXT_PUBLIC_CALENDLY_URL || "",
+};
+
 export const SITE_NAME = "Owner Financing the Halal Way";

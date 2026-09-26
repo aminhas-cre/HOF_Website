@@ -54,6 +54,15 @@ site shows "Coming soon" instead of a broken link. Once you've created the
 WhatsApp group, Instagram account, and Facebook Group, drop their invite/
 profile links in and redeploy.
 
+The "Start with these, free" section works the same way:
+`NEXT_PUBLIC_TRAINING_VIDEOS_URL`, `NEXT_PUBLIC_RESOURCES_URL`, and
+`NEXT_PUBLIC_CALENDLY_URL` control those three cards, "Coming soon" until
+set. The training videos link only appears after someone signs up via the
+"Enroll free" button (`/signup?magnet=training`) — it is not shown on the
+landing page itself. The calculator card links to the separate
+`aminhas-cre/mortgage-investment-calculator` project by default; override
+with `NEXT_PUBLIC_CALCULATOR_URL` if that ever moves.
+
 ## Viewing signups
 
 Every signup lands in the `leads` table in Supabase. In the Supabase

@@ -3,7 +3,7 @@
 import { useState, type FormEvent } from "react";
 import Link from "next/link";
 import type { LeadBucket, LeadPayload } from "@/lib/types";
-import { SOCIAL_LINKS } from "@/lib/constants";
+import { FREE_OFFERS, SOCIAL_LINKS } from "@/lib/constants";
 
 const TOTAL_STEPS = 4;
 
@@ -110,7 +110,7 @@ function RadioGroup({
   );
 }
 
-export function SignupForm() {
+export function SignupForm({ magnet }: { magnet?: "training" }) {
   const [step, setStep] = useState(1);
   const [form, setForm] = useState<FormState>(initialState);
   const [submitting, setSubmitting] = useState(false);
@@ -184,6 +184,28 @@ export function SignupForm() {
           Thank you for signing up. Here is where the community lives right
           now.
         </p>
+        {magnet === "training" && (
+          <div className="mt-6 rounded-xl border border-gold/30 bg-sand/60 p-6 text-left">
+            <h3 className="font-semibold text-emerald">
+              Your free Owner Financing 101 videos
+            </h3>
+            {FREE_OFFERS.trainingVideos ? (
+              <a
+                href={FREE_OFFERS.trainingVideos}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary mt-3 inline-block"
+              >
+                Watch now
+              </a>
+            ) : (
+              <p className="mt-2 text-sm text-ink/60">
+                The videos are almost ready. We will email you the link as
+                soon as they are live.
+              </p>
+            )}
+          </div>
+        )}
         <div className="mt-6 grid gap-3 sm:grid-cols-3">
           {[
             { name: "WhatsApp Group", url: SOCIAL_LINKS.whatsapp },

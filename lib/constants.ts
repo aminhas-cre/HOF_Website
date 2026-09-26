@@ -14,6 +14,11 @@ export const FREE_OFFERS = {
   trainingVideos: process.env.NEXT_PUBLIC_TRAINING_VIDEOS_URL || "",
   resources: process.env.NEXT_PUBLIC_RESOURCES_URL || "",
   calendly: process.env.NEXT_PUBLIC_CALENDLY_URL || "",
+  // Separate deployed project (aminhas-cre/mortgage-investment-calculator).
+  // Already live, so this has a real default instead of an empty placeholder.
+  calculator:
+    process.env.NEXT_PUBLIC_CALCULATOR_URL ||
+    "https://mortgage-investment-calculator-woad.vercel.app",
 };
 
 export const SITE_NAME = "Owner Financing the Halal Way";

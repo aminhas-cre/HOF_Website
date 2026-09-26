@@ -2,6 +2,7 @@ import { Header } from "@/components/landing/Header";
 import { Hero } from "@/components/landing/Hero";
 import { Problem } from "@/components/landing/Problem";
 import { HowItWorks } from "@/components/landing/HowItWorks";
+import { FreeOffers } from "@/components/landing/FreeOffers";
 import { CommunityChannels } from "@/components/landing/CommunityChannels";
 import { AboutFounder } from "@/components/landing/AboutFounder";
 import { TrustStrip } from "@/components/landing/TrustStrip";
@@ -16,6 +17,7 @@ export default function HomePage() {
         <Hero />
         <Problem />
         <HowItWorks />
+        <FreeOffers />
         <CommunityChannels />
         <AboutFounder />
         <TrustStrip />
